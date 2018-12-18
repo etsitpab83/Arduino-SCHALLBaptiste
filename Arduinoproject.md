@@ -24,6 +24,19 @@ Pour le moment nous faisons tout en duo mais maintenant il faut répartir les di
 Cette répartition étant bien évidemment provisoire. 
 Nous allons suivre la progression de chacun constamment, l’assignement des taches correspond juste à une spécification dans un certain domaine.
  
+18/12 :
+Aujourd’hui, nous avons commencé à suivre nos répartitions de taches, j’ai donc commencé la compréhension du Pid, premièrement au niveau théorique, le principe est assez simple, le PID est divisé en 3 parties : Proportionnal , Intergral , Derivative d’où PID , chaque partie à une fonction différente. Pour expliquer sans rentrer dans les détails, je vais donner un exemple pour chaque partie,
+Soit un pendule, qu’on lâche à une hauteur h (position P), on veut que grâce au PID, il se stop à l’origine, avec le moins d’oscillation possible :
+Les calculs que va faire le PID sont les suivants, 
+Proportionnal : « A quel point je suis loin de la position d’origine ? », Plus je suis loin plus la vitesse que l’on va me donner est grande.
+Integral : « Depuis combien de temps que l’on ma lâché de la position P ? » Plus on m’a lâché depuis longtemps, plus on doit me donner de la vitesse.
+Derivative : « A quel point je suis proche de l’origine » Plus je suis proche de celle-ci, moins on doit me donner de vitesse (ralentissement).
+Bien évidemment, derrière ses principes, il y a des calculs extrêmement complexes que j’ai compris en diagonal, mais j’ai vite compris que vouloir comprendre l’intégralité des calculs allait être une perte de temps. 
+ J’ai alors malgré, l’absence de matériel pour l’instant, commencé la partie code du TouchScreen, en m’appropriant les fonctions de base de la bibliothèque TouchScreen.h, Les fonctions sont plutôt simple à utiliser, l’ensemble est plutôt simple à manipuler.
+Nous avons aussi effectué un changement majeur dans notre projet, l’utilisation de 2 servomoteurs au lieu de 3 prévus, un servo gérera l’axe l’autre l’axe y.
+ 
+ 
+
 
  
  
