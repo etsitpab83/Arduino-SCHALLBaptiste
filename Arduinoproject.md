@@ -35,6 +35,14 @@ Bien évidemment, derrière ses principes, il y a des calculs extrêmement compl
  J’ai alors malgré, l’absence de matériel pour l’instant, commencé la partie code du TouchScreen, en m’appropriant les fonctions de base de la bibliothèque TouchScreen.h, Les fonctions sont plutôt simple à utiliser, l’ensemble est plutôt simple à manipuler.
 Nous avons aussi effectué un changement majeur dans notre projet, l’utilisation de 2 servomoteurs au lieu de 3 prévus, un servo gérera l’axe l’autre l’axe y.
  
+ 11/01/2019 :
+Reprise post-vacances du projet, je n’ai personnellement pas vraiment travaillé sur le projet pendant celles-ci, ne possédant pas le matériel nécessaire et n’ayant pas le temps (fêtes + plusieurs DS à préparer).
+Pendant cette séance, j’ai bossé sur le touchscreen, celui-ci enfin en notre possession, avant les vacances j’avais écrit le code pour tester le Touchscreen, j’ai donc pu le tester.
+Résultat : après quelques problèmes d’exportation de librairies, le programme nous renvoie des coordonnées correspondant à notre position sur le touchscreen, mais il y a un problème :
+Au niveau des coordonnées celles-ci sont faussées , en effet le touchscreen est constitué de plusieurs écrans, pour faire simple disons qu’il y en a un grand et un petit, la propriété tactile est présente uniquement sur la surface du petit écran, il y a donc un bord qui n’est pas tactile, pour les calculs avec le PID, seul la surface tactile est importante, or l’origine des coordonnées n’est pas situé dans le petit écran, Le coin correspondant au coin  bas-gauche du petit écran correspond au point ( 66.115), j’ai donc mettre en place 2 variables convert, pour redéfinir l’origine du systèmes de coordonnées .
+J’ai ensuite commencé la partie communication, dans notre projet à la place de mettre une manette physique nous permettant par exemple de bouger manuellement la plaque ou de placer la Ball à un endroit précis, nous avons opté pour un système Bluetooth donc une manette virtuelle sans fil, j’ai donc commencé le code correspondant à la manette, celui-ci est fortement incomplet la partie sur les servos moteurs n’étant pas encore faite.
+Finalement j’ai trouvé un code pour la partie PID correspondant à notre projet, code qui n’est pas encore compris dans sa totalité mais la est pas difficulté majeur du projet 
+
  
 
 
